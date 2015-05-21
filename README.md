@@ -37,9 +37,9 @@ end
 ## Example
 
 * Stylesheet has 5,000 selectors
-* `css-splitter` will split this into 4 files:
-* css-file.css = full file (will work on modern browsers)
-* css-file-1.css = will contain the remaining 5 CSS selectors
+* `css-splitter` will split this into 2 files:
+** css-file.css = full file (will work on modern browsers)
+** css-file-1.css = will contain the remaining 5 CSS selectors
 * Manually, on your layouts, you will need to include the additional CSS inside of IE conditional tags:
 
 ```
