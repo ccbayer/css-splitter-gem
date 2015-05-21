@@ -1,20 +1,20 @@
 # css-splitter-gem
 Standalone gem for CSS splitter code that simply abstracts the config into a gem that can be included in config.rb.
 
-Mega-props to https://gist.github.com/10thfloor/3559165 from which the code was entirely lifted.
-Saves the convenience of having to add a lot of code into the config file.
+Props to https://gist.github.com/10thfloor/3559165 from which the code was entirely lifted.
+All this gem does is saves the convenience of having to add a lot of code into the config file.
 
 
 # Usage
 
-If your CSS files are mega-bloated and large, they may not render on IE 9 and lower, due to a limit on the number of CSS selectors the browser will render (4095). This utility keeps track of your selector count for you and will split the files at the appropriate place.
+If your CSS files are bloated and large, they may not render on IE 9 and lower, due to a limit on the number of CSS selectors the browser will render (4095). This utility keeps track of your selector count for you and will split the files at the appropriate place.
 
 # Resources & Additional Tools
 http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx
 http://support.microsoft.com/kb/262161
 
 
-Another resource works slightly differently and is based on node.js: 
+Another resource works slightly differently and is based on node.js:
 http://blesscss.com
 
 # Implementation
