@@ -15,7 +15,7 @@ http://support.microsoft.com/kb/262161
 
 
 Another resource works slightly differently and is based on node.js: 
-blesscss.com
+http://blesscss.com
 
 # Implementation
 
@@ -27,19 +27,27 @@ gem 'css-splitter', '=0.0.1'
 require 'css-splitter'
 ```
 
-* to execute the command
+* to automatically execute the command after compass does its thing:
 ```
 on_stylesheet_saved do |path|
   CssSplitter.split(path) unless path[/\d+$/]
 end
 ```
 
-# Example
+## Example
 
 * Stylesheet has 5,000 selectors
-* css-splitter will split this into 4 files:
+* `css-splitter` will split this into 4 files:
 * css-file.css = full file (will work on modern browsers)
 * css-file-1.css = will contain the remaining 5 CSS selectors
-* Manually, on your layouts, you will need to include the additional CSS inside of IE conditional tags
+* Manually, on your layouts, you will need to include the additional CSS inside of IE conditional tags:
+
+```
+<!-- first css contains all css and will work on all new browsers -->
+<link href="path-to-css/css-file.css" type="text/css" rel="stylesheet"/> 
+<!--[if lte IE 9]>
+<link href="path-to-css/css-file-1.css" type="text/css" rel="stylesheet"/>
+<![endif]-->
+```
 
 
